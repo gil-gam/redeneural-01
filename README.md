@@ -99,9 +99,13 @@ const tensorLabels = [
   // Add corresponding labels
 ];
 
-[Image blocked:](imagejavascript)
-[Image blocked:](imagenodejs)
-[Image blocked:](imagetensorflow)
-[Image blocked:](imagedocker)
+<p align="center">
+  <img src="./images/imagejavascript.png" alt="JavaScript" width="60" />
+  <img src="./images/imagenodejs.png" alt="Node.js" width="60" />
+  <img src="./images/imagetensorflow.png" alt="TensorFlow" width="60" />
+  <img src="./images/imagedocker.png" alt="Docker" width="60" />
+</p>
+
+
 
 
