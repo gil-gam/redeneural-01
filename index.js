@@ -45,13 +45,13 @@ async function predict(model, level) {
 // const level = [
 //     { level: "beginner", chords: "basic chords", scales: "pentatonic", licks: "in just 1 shape" },
 //     { level: "intermediate", chords: "CAGED", scales: "minor natural scale", licks: "in various shapes" },
-//     { level: "advanced", chords: "inverted chords", scales: "minor harmonic scale", licks: "in various shades" }
+//     { level: "advanced", chords: "inverted chords", scales: "minor harmonic scale", licks: "in various tones" }
 // ];
 
 // Input vectors with values already normalized and one-hot encoded
 // Order: [basic chords, CAGED, inverted chords, 
 //          scale pentatonic, minor natural scale, minor harmonic scale, 
-//          in just 1 shape, in various shapes, in various shades]
+//          in just 1 shape, in various shapes, in various tones]
 // const tensorLevels = [
 //     [1, 0, 0, 1, 0, 0, 1, 0, 0], // beginner
 //     [1, 1, 0, 1, 1, 0, 1, 1, 0],    // intermediate
@@ -92,7 +92,7 @@ const levelTensorNormalized = [
         0,    // harmonic minor scale
         1,    // in just 1 shape
         0,    // in various shapes
-        0,    // in various shades        
+        0,    // in various tones        
     ]
 ]
 
@@ -101,4 +101,5 @@ const results = predictions
     .sort((a, b) => b.prob - a.prob)
     .map(p => `${guitarLevels[p.index]} (${(p.prob * 100).toFixed(2)}%)`)
     .join('\n')
+
 console.log(results)
