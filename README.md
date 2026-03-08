@@ -98,10 +98,3 @@ const tensorLabels = [
   [0, 0, 1], // advanced
   // Add corresponding labels
 ];
-
-[Image blocked:](imagejavascript)
-[Image blocked:](imagenodejs)
-[Image blocked:](imagetensorflow)
-[Image blocked:](imagedocker)
-
-
